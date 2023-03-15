@@ -1,6 +1,6 @@
 import express from "express";
 import axios from "axios";
-const cheerio = require("cheerio");
+import cheerio from "cheerio";
 const port = 3000;
 console.log(port);
 const app = express();
