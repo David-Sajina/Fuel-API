@@ -22,8 +22,14 @@ app.get("/", async (req, res) => {
 			const result = [];
 			let counter = 0;
 			let vrste = [];
+			let first = false;
 			strongs.each(function () {
-				vrste.push(loaded(this).text());
+				if (loaded(this).text() == "Eurosuper 95") {
+					first = true;
+				}
+				if (first) {
+					vrste.push(loaded(this).text());
+				}
 			});
 			tbodyElements.each(function () {
 				const h2Text = loaded(this).prevAll("strong").first().text();
