@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "serve": "nodemon --exec babel-node src/index.js",
-    "build": "babel src -d dist",
+    "serve": "nodemon --exec babel-node index.js",
+    "build": "babel index.js -o dist/index.js --presets=@babel/preset-env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,9 +23,10 @@
     "mongoose": "^6.9.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
     "@babel/node": "^7.20.7",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-env": "^7.22.2",
     "nodemon": "^2.0.20"
   }
 }
