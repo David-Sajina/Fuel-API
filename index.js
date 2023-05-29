@@ -1,11 +1,13 @@
 import express from "express";
 import axios from "axios";
 import cheerio from "cheerio";
+import bodyParser from "body-parser";
+
 const port = 3000;
 console.log(port);
 const app = express();
 
-app.use(express.json());
+app.use(bodyParser.json({ limit: "10mb" }));
 global.fuelData = [];
 global.lastTimeCall = 0;
 
